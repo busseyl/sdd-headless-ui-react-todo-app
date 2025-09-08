@@ -1,0 +1,151 @@
+site_name: Headless UI Todo App
+site_url: https://busseyl.github.io
+site_description: A comprehensive React Todo Application built with Headless UI components demonstrating modern accessibility patterns and PWA capabilities
+site_author: Lucas Bussey
+
+repo_url: https://github.com/busseyl
+repo_name: busseyl/sdd-headless-ui-react-todo-app
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - Quick Start: getting-started/quick-start.md
+    - Installation: getting-started/installation.md
+    - Configuration: getting-started/configuration.md
+  - User Guide:
+    - Features: user-guide/features.md
+    - Using the App: user-guide/usage.md
+    - Keyboard Shortcuts: user-guide/keyboard-shortcuts.md
+    - Accessibility: user-guide/accessibility.md
+    - PWA Features: user-guide/pwa.md
+  - Developer Guide:
+    - Architecture: developer-guide/architecture.md
+    - Components: developer-guide/components.md
+    - Hooks: developer-guide/hooks.md
+    - Testing: developer-guide/testing.md
+    - Building: developer-guide/building.md
+    - Contributing: developer-guide/contributing.md
+  - API Reference:
+    - Types: api/types.md
+    - Components: api/components.md
+    - Hooks: api/hooks.md
+    - Utilities: api/utilities.md
+  - Testing:
+    - Overview: testing/overview.md
+  - Deployment:
+    - Overview: deployment/overview.md
+    - GitHub Pages: deployment/github-pages.md
+    - Netlify: deployment/netlify.md
+    - Vercel: deployment/vercel.md
+    - Docker: deployment/docker.md
+  - FAQ: faq.md
+  - About:
+    - Release Notes: about/release-notes.md
+    - License: about/license.md
+    - Contributing: about/contributing.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: busseyl
+      repo: headless-ui
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/busseyl
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/lbussey
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
