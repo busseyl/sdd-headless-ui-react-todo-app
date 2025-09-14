@@ -9,14 +9,15 @@ on:
 env:
   NODE_VERSION: '18'
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./todo-app
+
 jobs:
   test:
     name: Test Suite
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./todo-app
     
     steps:
       - name: Checkout code
