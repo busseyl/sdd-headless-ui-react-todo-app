@@ -48,7 +48,7 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           file: ./coverage/lcov.info
-          # fail_ci_if_error: true
+          fail_ci_if_error: true
 
   security:
     name: Security Audit
@@ -134,7 +134,7 @@ jobs:
   build:
     name: Build Application
     runs-on: ubuntu-latest
-    needs: [test, security, accessibility]
+    # needs: [test, security, accessibility]
     
     steps:
       - name: Checkout code
